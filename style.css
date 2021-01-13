@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+:root {
+  --poppins: 'Poppins', sans-serif;
+
+  --light: #c4c4c4;
+  --dark: #161616;
+  --white: #f7f7f7;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--poppins);
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  background: var(--dark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.list {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+
+.list .list-link {
+  position: relative;
+  color: var(--light);
+  text-decoration: none;
+  padding: 7px 0;
+  font-size: 1.3rem;
+}
+
+.list .list-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0%;
+  height: 1px;
+  background: var(--white);
+  transition: 0.4s ease-out;
+}
+
+.list .list-link:hover::after {
+  left: 0;
+  width: 100%;
+}
